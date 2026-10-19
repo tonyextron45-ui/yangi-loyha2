@@ -7,7 +7,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, CallbackQu
 
 TOKEN = os.getenv("BOT_TOKEN", "8643378046:AAF3VyM6OtHJ4ZkYh7AM5YvFnEQUAA0-o7A")
 ADMINS = {int(x) for x in os.getenv("ADMIN_IDS", "8837120659").split(",") if x.strip().isdigit()}
-DB = os.getenv("DB_PATH", "/var/data/kino.sqlite3")
+DB = os.getenv("DB_PATH", "/tmp/kino.sqlite3")
 PORT = int(os.getenv("PORT", "10000"))
 PRICE = os.getenv("PREMIUM_PRICE", "Admin bilan kelishiladi")
 PAYMENT = os.getenv("PAYMENT_INFO", "To‘lov ma’lumotini admin beradi.")
