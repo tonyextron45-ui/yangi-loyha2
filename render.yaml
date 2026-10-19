@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: kino-vibeuz-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_IDS
+        sync: false
+      - key: DB_PATH
+        value: /var/data/kino.sqlite3
+      - key: PREMIUM_PRICE
+        value: "Kelishiladi"
+      - key: PAYMENT_INFO
+        value: "To‘lov ma’lumotini admin beradi."
+    disk:
+      name: kino-vibeuz-data
+      mountPath: /var/data
+      sizeGB: 1
