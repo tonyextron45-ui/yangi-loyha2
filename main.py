@@ -5,7 +5,7 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, ChatMem
 from telegram.error import TelegramError
 from telegram.ext import Application, CommandHandler, MessageHandler, CallbackQueryHandler, ChatMemberHandler, ContextTypes, filters
 
-TOKEN = os.getenv("BOT_TOKEN", "8643378046:AAHQEnnuWdQ7qIxj7keXSGOxVAQNFEVdIPo")
+TOKEN = os.getenv("BOT_TOKEN", "8643378046:AAF3VyM6OtHJ4ZkYh7AM5YvFnEQUAA0-o7A")
 ADMINS = {int(x) for x in os.getenv("ADMIN_IDS", "8837120659").split(",") if x.strip().isdigit()}
 DB = os.getenv("DB_PATH", "/var/data/kino.sqlite3")
 PORT = int(os.getenv("PORT", "10000"))
